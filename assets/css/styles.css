@@ -1,47 +1,43 @@
-
-
-/* Estilos para la sección Sobre mí */
-.about {
-    background-color: #2b2b2b; /* Fondo oscuro para la caja */
-    border-radius: 10px; /* Bordes redondeados */
-    padding: 60px; /* Espacio dentro de la caja */
-    box-shadow: 0 0 25px rgba(0, 153, 255, 0.9); /* Efecto fluorescente azul */
-    transition: transform 0.3s; /* Transición suave en transformaciones */
-    max-width: calc(100% - 33.33%); /* Ancho reducido en un tercio */
-    margin: 0 auto; /* Centra la caja horizontalmente */
-    margin-bottom: 40px; /* Ajusta el valor según el espacio deseado */
+/* Contenedor centrado para la caja de "sobre mí" */
+.about-container {
+    max-width: 800px; /* Ajusta el ancho máximo según tus necesidades */
+    margin: 0 auto; /* Centra el contenedor horizontalmente */
+    padding: 20px; /* Espacio alrededor del contenido */
 }
 
-
-/* Estilos para pantallas con un ancho máximo de 768px */
-@media (max-width: 768px) {
-    /* Ajusta el tamaño de la foto de perfil para pantallas pequeñas */
-    .profile-photo {
-        width: 100px;
-        height: 100px;
-    }
-
-    /* Cambia la dirección del contenido del header a columna en lugar de fila */
-    .header-content {
-        flex-direction: column;
-    }
-
-    /* Reduce el padding en las cajas de proyectos y sobre mí para pantallas más pequeñas */
-    .project-box, .about {
-        padding: 15px;
-    }
-
-    /* Ajusta la cuadrícula de proyectos para 2 proyectos por línea */
-    .projects-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
+/* Estilos generales para el header */
+.header {
+    position: relative;
+    width: 100%;
+    height: 100vh; /* Mantén la altura del header en pantalla completa */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden; /* Evita que el contenido se salga del header */
 }
 
-/* Estilos para pantallas con un ancho máximo de 480px */
-@media (max-width: 480px) {
-    .projects-grid {
-        grid-template-columns: 1fr; /* Una columna para pantallas muy pequeñas */
-    }
+/* Estilos para el contenido del header */
+.header-content {
+    position: relative;
+    z-index: 1; /* Asegura que el contenido esté sobre el canvas */
+    display: flex;
+    flex-direction: column; /* Organiza el contenido en columna */
+    align-items: center; /* Centra horizontalmente los elementos hijos */
+    justify-content: center; /* Centra verticalmente los elementos hijos */
+    margin-top: 200px; /* Ajusta este valor para mover el contenido hacia abajo */
+    height: auto; /* Ajusta la altura del contenido para mantenerlo centrado */
+}
+
+/* Estilos para el canvas de animación */
+canvas#neuro {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 70vh;
+    pointer-events: none;
+    opacity: 0.95;
+    z-index: -1; /* Asegúrate de que el canvas esté detrás de otros elementos del header */
 }
 
 /* Estilos generales del cuerpo de la página */
@@ -53,39 +49,14 @@ body {
     padding: 0; /* Quita el padding predeterminado */
 }
 
-/* Estilos para el header */
-header {
-    display: flex; /* Utiliza flexbox para el layout del header */
-    justify-content: center; /* Centra el contenido horizontalmente */
-    align-items: center; /* Centra el contenido verticalmente */
-    height: 300px; /* Altura del header */
-    background-color: #121212; /* Fondo del header en tono oscuro */
-    position: relative; /* Posición relativa para poder posicionar el contenido internamente */
-    overflow: hidden; /* Oculta el contenido que se desborda */
-}
-
-/* Estilos para el código tipo Matrix en el fondo del header */
-.matrix-code {
-    position: absolute; /* Posición absoluta para superponerlo en el header */
-    top: 0; /* Alineado al tope del header */
-    left: 0; /* Alineado al borde izquierdo del header */
-    width: 100%; /* Ocupa todo el ancho del header */
-    height: 100%; /* Ocupa toda la altura del header */
-    background: url('assets/images/banner1.gif') no-repeat center center; /* Utiliza una imagen o GIF como fondo */
-    background-size: cover; /* Ajusta el tamaño del fondo para cubrir todo el header */
-    opacity: 0.2; /* Transparencia del fondo para no sobrecargar visualmente */
-    z-index: -1; /* Envía el fondo detrás del contenido principal */
-}
-
-
-
 /* Estilos para la foto de perfil */
 .profile-photo {
     border-radius: 50%; /* Hace que la imagen sea redonda */
     width: 150px; /* Ancho de la imagen */
     height: 150px; /* Altura de la imagen */
     object-fit: cover; /* Mantener la proporción de la imagen */
-    margin-bottom: 20px; /* Espacio debajo de la imagen */
+    margin-bottom: 120px; /* Espacio debajo de la imagen */
+    margin-top: -70px; /* Ajusta este valor para mover la imagen hacia arriba */
     box-shadow: 0 0 15px rgba(0, 255, 255, 0.5); /* Sombra de neón */
     transition: transform 0.3s, box-shadow 0.3s; /* Transiciones suaves */
     position: relative; /* Posicionamiento relativo */
@@ -127,7 +98,6 @@ h2 {
     border-bottom: 2px solid #008cff; /* Línea fluorescente debajo del título */
     padding-bottom: 10px; /* Espacio debajo del texto del título */
 }
-
 
 /*-------------------------------------------------------------------------------------------*/
 
@@ -438,7 +408,6 @@ footer {
     color: #ccc; /* Color gris para la información adicional del perfil */
     padding-top: 5px; /* Espaciado superior para la información adicional */
 }
-
 
 /*-------------------------------------------------------------------------------------------*/
 

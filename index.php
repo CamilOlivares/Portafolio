@@ -10,7 +10,8 @@
 </head>
 <body>
     <header>
-        <div class="matrix-code"></div> <!-- Aquí está el contenedor del GIF -->
+         <!-- Canvas para el efecto de lava -->
+         <canvas id="neuro"></canvas>
         <div class="header-content">
             <img src="assets/images/foto_perfil.png" alt="Mi foto" class="profile-photo">
             <!-- Puedes agregar más contenido aquí si es necesario -->
@@ -18,7 +19,8 @@
     </header>
 
     <main>
-        <section id="about" class="about">
+    <section class="about-container">
+    <div class="about">
             <?php include("views/likedin.html"); ?> <!-- Incluye el contenido de LinkedIn -->
             <h2>Sobre Mí</h2>
             <p>soy Camilo Olivares, un desarrollador apasionado por crear experiencias digitales únicas. Tengo una alta experiencia y he trabajado en varios proyectos interesantes....</p>
@@ -38,6 +40,7 @@
     <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
     <!-- Tu archivo de scripts -->
     <script src="js/scripts.js"></script>
+    <script src="js/neuro.js"></script>
     
     <!-- Inicializar AOS -->
     <script>
@@ -47,5 +50,6 @@
             once: true, // Animar solo una vez cuando el elemento entra en el viewport
         });
     </script>
+ 
 </body>
 </html>
