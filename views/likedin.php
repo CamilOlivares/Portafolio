@@ -5,8 +5,6 @@
       <div class="profile">
         <!-- Perfil de usuario dentro del tooltip -->
         <div class="user">
-          <!-- Contenedor de la imagen y los detalles del usuario -->
-          <div class="img">Ui</div>
           <!-- Iniciales o avatar del usuario -->
           <div class="details">
             <!-- Contenedor de los detalles del usuario -->
