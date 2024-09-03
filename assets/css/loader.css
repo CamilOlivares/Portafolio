@@ -1,0 +1,108 @@
+/* Estilos de la animación "glitch" */
+.glitch {
+  position: relative; /* Posición relativa para permitir el uso de elementos pseudo (before y after) */
+  font-size: 25px; /* Tamaño de la fuente del texto del efecto glitch */
+  font-weight: 700; /* Grosor del texto en negrita */
+  line-height: 1.2; /* Altura de línea ajustada para el texto */
+  color: #fff; /* Color blanco para el texto principal */
+  letter-spacing: 5px; /* Espaciado entre letras para un efecto más amplio */
+  z-index: 1; /* Define la capa del texto sobre otros elementos */
+  animation: shift 1s ease-in-out infinite alternate; /* Animación de distorsión de texto en bucle infinito */
+}
+
+.glitch:before,
+.glitch:after {
+  display: block; /* Mostrar los elementos pseudo como bloques para ocupar todo el ancho disponible */
+  content: attr(data-glitch); /* Contenido del pseudo-elemento es el mismo texto que el atributo data-glitch */
+  position: absolute; /* Posicionamiento absoluto para colocar los elementos pseudo sobre el texto principal */
+  top: 0; /* Alinear al tope del elemento principal */
+  left: 0; /* Alinear al lado izquierdo del elemento principal */
+  opacity: 0.8; /* Define opacidad para hacer el efecto más visible */
+}
+
+.glitch:before {
+  animation: glitch 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94) both infinite; /* Animación de glitch en bucle infinito para el pseudo-elemento before */
+  color: #8b00ff; /* Color púrpura para el pseudo-elemento before */
+  z-index: -1; /* Colocar detrás del texto principal */
+}
+
+.glitch:after {
+  animation: glitch 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94) reverse both infinite; /* Animación de glitch en bucle inverso para el pseudo-elemento after */
+  color: #00e571; /* Color verde para el pseudo-elemento after */
+  z-index: -2; /* Colocar detrás del pseudo-elemento before */
+}
+
+/* Animación "glitch" para simular el efecto de distorsión */
+@keyframes glitch {
+  0% {
+      transform: translate(0); /* Inicio sin desplazamiento */
+  }
+  20% {
+      transform: translate(-3px, 3px); /* Desplazar ligeramente hacia la izquierda y abajo */
+  }
+  40% {
+      transform: translate(-3px, -3px); /* Desplazar ligeramente hacia la izquierda y arriba */
+  }
+  60% {
+      transform: translate(3px, 3px); /* Desplazar ligeramente hacia la derecha y abajo */
+  }
+  80% {
+      transform: translate(3px, -3px); /* Desplazar ligeramente hacia la derecha y arriba */
+  }
+  to {
+      transform: translate(0); /* Volver al estado original */
+  }
+}
+
+/* Animación "shift" para aplicar un efecto de distorsión o interferencia */
+@keyframes shift {
+  0%, 40%, 44%, 58%, 61%, 65%, 69%, 73%, 100% {
+      transform: skewX(0deg); /* Sin distorsión (horizontalmente) en estos puntos clave */
+  }
+  41% {
+      transform: skewX(10deg); /* Distorsión hacia la derecha en un punto clave */
+  }
+  42% {
+      transform: skewX(-10deg); /* Distorsión hacia la izquierda inmediatamente después */
+  }
+  59% {
+      transform: skewX(40deg) skewY(10deg); /* Mayor distorsión hacia la derecha y ligera hacia arriba */
+  }
+  60% {
+      transform: skewX(-40deg) skewY(-10deg); /* Mayor distorsión hacia la izquierda y ligera hacia abajo */
+  }
+  63% {
+      transform: skewX(10deg) skewY(-5deg); /* Distorsión leve hacia la derecha y ligeramente hacia abajo */
+  }
+  70% {
+      transform: skewX(-50deg) skewY(-20deg); /* Gran distorsión hacia la izquierda y hacia abajo */
+  }
+  71% {
+      transform: skewX(10deg) skewY(-10deg); /* Distorsión moderada hacia la derecha y hacia abajo */
+  }
+}
+
+/* Estilos para el loader */
+body.loading {
+  margin: 0; /* Eliminar margen por defecto del body */
+  padding: 0; /* Eliminar padding por defecto del body */
+  overflow: hidden; /* Evitar que la página se desplace mientras carga */
+}
+
+.loader {
+  position: fixed; /* Mantener el loader fijo en la pantalla mientras carga */
+  top: 0; /* Posicionar el loader al tope de la página */
+  left: 0; /* Posicionar el loader al lado izquierdo de la página */
+  width: 100%; /* Abarcar todo el ancho de la pantalla */
+  height: 100%; /* Abarcar todo el alto de la pantalla */
+  display: flex; /* Usar Flexbox para centrar el contenido del loader */
+  justify-content: center; /* Centrar el contenido del loader horizontalmente */
+  align-items: center; /* Centrar el contenido del loader verticalmente */
+  background-color: #000; /* Color de fondo negro para el loader */
+  z-index: 9999; /* Asegura que el loader esté al frente de todos los elementos */
+}
+
+/* Asegura que el contenido principal esté oculto al inicio */
+#main-content {
+  display: none; /* Oculta el contenido principal mientras el loader esté activo */
+}

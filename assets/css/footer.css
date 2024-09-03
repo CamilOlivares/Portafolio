@@ -1,0 +1,6 @@
+/* Estilos del pie de página */
+footer {
+    background-color: #1e1e1e; /* Fondo oscuro del pie de página */
+    text-align: center; /* Centrar el texto horizontalmente */
+    padding: 20px 0; /* Añadir relleno vertical */
+}

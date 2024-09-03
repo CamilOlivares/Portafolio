@@ -1,0 +1,57 @@
+/* Estilos del formulario de contacto */
+form {
+    display: flex; /* Usar flexbox para layout */
+    flex-direction: column; /* Alinear los elementos en columna */
+    gap: 10px; /* Espacio entre los elementos del formulario */
+    max-width: 50%; /* Hacer el formulario la mitad del tamaño del contenedor */
+    margin: 0 auto; /* Centrar el formulario horizontalmente */
+    padding: 20px; /* Añadir relleno interno */
+    background: rgba(0, 0, 0, 0.7); /* Fondo oscuro con transparencia */
+    border-radius: 10px; /* Bordes redondeados */
+    box-shadow: 0 0 15px rgba(0, 170, 255, 0.5); /* Sombra luminiscente */
+}
+
+/* Estilos de los inputs y textarea del formulario */
+input, textarea {
+    padding: 10px; /* Añadir relleno interno */
+    border: none; /* Eliminar borde */
+    border-radius: 5px; /* Bordes redondeados */
+    background-color: #2e2e2e; /* Fondo oscuro */
+    color: #ffffff; /* Color del texto */
+    width: 100%; /* Asegurarse de que los inputs y textarea tomen el 100% del ancho del formulario */
+    box-sizing: border-box; /* Incluir padding y border en el ancho total */
+}
+
+/* Estilos del botón de envío del formulario */
+button {
+    padding: 10px; /* Añadir relleno interno */
+    border: none; /* Eliminar borde */
+    border-radius: 5px; /* Bordes redondeados */
+    background-color: #00aaff; /* Fondo del botón */
+    color: #ffffff; /* Color del texto del botón */
+    cursor: pointer; /* Cambiar cursor a mano al pasar sobre el botón */
+    transition: background-color 0.3s; /* Efecto de transición para el fondo */
+    box-shadow: 0 4px 8px rgba(0, 170, 255, 0.5); /* Sombra luminiscente */
+}
+
+/* Efecto hover en el botón de envío */
+button:hover {
+    background-color: #ffaa00; /* Fondo del botón en hover */
+    box-shadow: 0 8px 16px rgba(255, 170, 0, 0.5); /* Sombra luminiscente en hover */
+}
+
+/* Estilos específicos para la sección de contacto */
+#contact {
+    text-align: center; /* Centrar el texto horizontalmente */
+}
+
+/* Animación del gradiente */
+@keyframes gradientShift {
+    0% { background-position: 0% 50%; }
+    100% { background-position: 100% 50%; }
+}
+
+/* Efecto de escalado al pasar el cursor sobre las cajas */
+.contact:hover {
+    transform: scale(1.05); /* Aumenta el tamaño ligeramente al hacer hover */
+}

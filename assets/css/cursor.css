@@ -1,0 +1,23 @@
+/* Estilos para el cursor personalizado */
+.cursor {
+    width: 20px; /* Ancho del cursor */
+    height: 20px; /* Alto del cursor */
+    border: 2px solid #00aaff; /* Borde del cursor */
+    border-radius: 50%; /* Hacer el cursor circular */
+    position: absolute; /* Posicionamiento absoluto */
+    transform: translate(-50%, -50%); /* Centrar el cursor respecto al punto del mouse */
+    pointer-events: none; /* Evitar que el cursor interactúe con eventos del mouse */
+    transition: background-color 0.3s, transform 0.3s; /* Transiciones suaves */
+    z-index: 9999; /* Asegurar que el cursor esté por encima de otros elementos */
+}
+
+/* Estilos para resaltar el cursor en secciones específicas */
+.cursor.section-highlight {
+    background-color: rgba(0, 170, 255, 0.2); /* Fondo semitransparente */
+}
+
+/* Estilos para agrandar el cursor sobre botones y enlaces */
+.cursor.cursor-button {
+    transform: translate(-50%, -50%) scale(1.5); /* Aumentar el tamaño del cursor */
+    background-color: rgba(0, 170, 255, 0.5); /* Fondo semitransparente */
+}

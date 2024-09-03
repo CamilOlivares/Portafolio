@@ -1,0 +1,26 @@
+/* Estilo para el botón */
+.buttongit {
+    display: flex;
+    gap: 0.75rem; /* Espaciado entre el icono y el texto */
+    cursor: pointer; /* Cursor en forma de mano */
+    color: white; /* Color del texto */
+    font-weight: 600; /* Peso de la fuente */
+    background: linear-gradient(to right, #1f1f1f, #000000); /* Degradado de fondo */
+    padding: 0.75rem 1.75rem; /* Espaciado interno (padding) */
+    border-radius: 9999px; /* Bordes redondeados (full circle) */
+    border: 1px solid #2d2d2d; /* Borde del botón */
+    transition: transform 0.2s ease, color 0.2s ease, border-color 0.2s ease, background 0.2s ease; /* Transiciones suaves */
+}
+
+.buttongit:hover {
+    transform: scale(1.05); /* Escalar el botón al pasar el cursor */
+    color: #b0b0b0; /* Color del texto en hover */
+    border-color: #333333; /* Color del borde en hover */
+    background: linear-gradient(to right, #000000, #1c1c1c); /* Degradado de fondo en hover */
+}
+
+.buttongit svg {
+    height: 24px; /* Tamaño del icono SVG */
+    width: 24px; /* Tamaño del icono SVG */
+    fill: #FFFFFF; /* Color de relleno del icono */
+}
