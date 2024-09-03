@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="assets/css/cursor.css"> <!-- Estilos personalizados para el cursor -->
     <link rel="stylesheet" href="assets/css/likedin.css"> <!-- Estilos específicos para el contenido de LinkedIn -->
     <link rel="stylesheet" href="assets/css/github.css"> <!-- Estilos específicos para el contenido de GitHub -->
+    <link rel="stylesheet" href="assets/css/proyect.css"> <!-- Estilos específicos para el contenido de GitHub -->
     <link rel="stylesheet" href="assets/css/contact.css"> <!-- Estilos para la sección de contacto -->
     <link rel="stylesheet" href="assets/css/footer.css"> <!-- Estilos para el pie de página -->
 </head>
