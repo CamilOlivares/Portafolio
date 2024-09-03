@@ -9,6 +9,14 @@ form {
     background: rgba(0, 0, 0, 0.7); /* Fondo oscuro con transparencia */
     border-radius: 10px; /* Bordes redondeados */
     box-shadow: 0 0 15px rgba(0, 170, 255, 0.5); /* Sombra luminiscente */
+    transition: transform 0.3s, background-color 0.3s, box-shadow 0.3s; /* Transición suave para transformaciones y fondo */
+}
+
+/* Efecto hover para el formulario */
+form:hover {
+    transform: scale(1.05); /* Aumenta ligeramente el tamaño al hacer hover */
+    background-color: rgba(0, 0, 0, 0.85); /* Fondo ligeramente más oscuro en hover */
+    box-shadow: 0 0 25px rgba(0, 255, 255, 0.7); /* Sombra luminiscente más intensa en hover */
 }
 
 /* Estilos de los inputs y textarea del formulario */
@@ -20,7 +28,15 @@ input, textarea {
     color: #ffffff; /* Color del texto */
     width: 100%; /* Asegurarse de que los inputs y textarea tomen el 100% del ancho del formulario */
     box-sizing: border-box; /* Incluir padding y border en el ancho total */
+    transition: background-color 0.3s, box-shadow 0.3s; /* Transición suave para fondo y sombra */
 }
+
+/* Efecto hover en los inputs y textarea */
+input:hover, textarea:hover {
+    background-color: rgba(0, 255, 255, 0.1); /* Azul fluorescente transparente en hover */
+    box-shadow: 0 0 10px rgba(0, 170, 255, 0.7); /* Sombra luminiscente azul en hover */
+}
+
 
 /* Estilos del botón de envío del formulario */
 button {
@@ -30,7 +46,7 @@ button {
     background-color: #00aaff; /* Fondo del botón */
     color: #ffffff; /* Color del texto del botón */
     cursor: pointer; /* Cambiar cursor a mano al pasar sobre el botón */
-    transition: background-color 0.3s; /* Efecto de transición para el fondo */
+    transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s; /* Efecto de transición para el fondo */
     box-shadow: 0 4px 8px rgba(0, 170, 255, 0.5); /* Sombra luminiscente */
 }
 
@@ -38,6 +54,7 @@ button {
 button:hover {
     background-color: #ffaa00; /* Fondo del botón en hover */
     box-shadow: 0 8px 16px rgba(255, 170, 0, 0.5); /* Sombra luminiscente en hover */
+    transform: scale(1.1); /* Aumenta el tamaño del botón ligeramente al hacer hover */
 }
 
 /* Estilos específicos para la sección de contacto */

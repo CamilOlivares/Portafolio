@@ -1,3 +1,23 @@
+/* Estilos generales del cuerpo de la página */
+body {
+    background-color: #1c1c1c; /* Fondo oscuro mate */
+    color: #e0e0e0; /* Color de texto gris claro */
+    font-family: 'Arial', sans-serif; /* Fuente general del sitio */
+    margin: 0; /* Quita los márgenes predeterminados */
+    padding: 0; /* Quita el padding predeterminado */
+}
+
+/* Estilos para el contenido principal */
+main {
+    padding: 20px; /* Espacio alrededor del contenido */
+}
+
+/* Estilos para las secciones dentro del main */
+section {
+    margin-bottom: 60px; /* Espacio entre las secciones */
+}
+
+
 /* Estilos generales para el header */
 .header {
     position: relative;
@@ -33,15 +53,6 @@ canvas#neuro {
     z-index: -1; /* Asegúrate de que el canvas esté detrás de otros elementos del header */
 }
 
-/* Estilos generales del cuerpo de la página */
-body {
-    background-color: #1c1c1c; /* Fondo oscuro mate */
-    color: #e0e0e0; /* Color de texto gris claro */
-    font-family: 'Arial', sans-serif; /* Fuente general del sitio */
-    margin: 0; /* Quita los márgenes predeterminados */
-    padding: 0; /* Quita el padding predeterminado */
-}
-
 /* Estilos para la foto de perfil */
 .profile-photo {
     border-radius: 50%; /* Hace que la imagen sea redonda */
@@ -62,15 +73,6 @@ body {
     transition: transform 1s; /* Duración de la animación */
 }
 
-/* Estilos para el contenido principal */
-main {
-    padding: 20px; /* Espacio alrededor del contenido */
-}
-
-/* Estilos para las secciones dentro del main */
-section {
-    margin-bottom: 60px; /* Espacio entre las secciones */
-}
 
 /* Contenedor centrado para la caja de "sobre mí" */
 .about-container {
