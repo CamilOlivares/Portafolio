@@ -1,0 +1,21 @@
+/* Estilos para la foto de perfil */
+.profile-photo {
+    border-radius: 50%; /* Hace que la imagen sea redonda */
+    width: 150px; /* Ancho de la imagen */
+    height: 150px; /* Altura de la imagen */
+    object-fit: cover; /* Mantener la proporción de la imagen */
+    margin-bottom: 120px; /* Espacio debajo de la imagen */
+    margin-top: -70px; /* Ajusta este valor para mover la imagen hacia arriba */
+    box-shadow: 0 0 15px rgba(0, 255, 255, 0.5); /* Sombra de neón */
+    transition: transform 0.3s, box-shadow 0.3s; /* Transiciones suaves */
+    position: relative; /* Posicionamiento relativo */
+}
+
+/* Efecto hover en la imagen de perfil */
+.profile-photo:hover {
+    transform: scale(1.5) rotateY(360deg); /* Agrandar y girar la imagen en hover */
+    box-shadow: 0 0 25px rgba(0, 255, 255, 0.7); /* Sombra de neón más intensa en hover */
+    transition: transform 1s; /* Duración de la animación */
+}
+
+

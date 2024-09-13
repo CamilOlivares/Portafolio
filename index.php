@@ -6,6 +6,9 @@
     <title>Mi Portafolio</title> <!-- Título de la página que aparece en la pestaña del navegador -->
     <!-- Enlaces a hojas de estilo CSS -->
     <link rel="stylesheet" href="assets/css/styles.css"> <!-- Hoja de estilo principal -->
+    <link rel="stylesheet" href="assets/css/header.css"> <!-- Hoja de estilo principal -->
+    <link rel="stylesheet" href="assets/css/profile.css"> <!-- Hoja de estilo principal -->
+    <link rel="stylesheet" href="assets/css/about.css"> <!-- Hoja de estilo principal -->
     <link rel="stylesheet" href="assets/css/loader.css"> <!-- Estilos para el "loader" de la página -->
     <link rel="stylesheet" href="assets/css/cursor.css"> <!-- Estilos personalizados para el cursor -->
     <link rel="stylesheet" href="assets/css/likedin.css"> <!-- Estilos específicos para el contenido de LinkedIn -->
@@ -20,8 +23,9 @@
     <?php include('views/loader.php'); ?><!-- Sección del cargador de la página -->
 
     <header>
-         
+
          <?php include('views/neuro.php'); ?><!-- Canvas para el efecto Neuro -->
+        
 
     </header>
 
@@ -50,6 +54,7 @@
     <script src="js/neuro.js"></script>
     <!-- Scripts para el cargador de la página -->
     <script src="js/loader.js"></script>
+    
 
 </body>
 </html>

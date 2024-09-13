@@ -1,0 +1,34 @@
+/* Estilos generales para el header */
+.header {
+    position: relative;
+    width: 100%;
+    height: 100vh; /* Mantén la altura del header en pantalla completa */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden; /* Evita que el contenido se salga del header */
+}
+
+/* Estilos para el contenido del header */
+.header-content {
+    position: relative;
+    z-index: 1; /* Asegura que el contenido esté sobre el canvas */
+    display: flex;
+    flex-direction: column; /* Organiza el contenido en columna */
+    align-items: center; /* Centra horizontalmente los elementos hijos */
+    justify-content: center; /* Centra verticalmente los elementos hijos */
+    margin-top: 200px; /* Ajusta este valor para mover el contenido hacia abajo */
+    height: auto; /* Ajusta la altura del contenido para mantenerlo centrado */
+}
+
+/* Estilos para el canvas de animación */
+canvas#neuro {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 70vh;
+    pointer-events: none;
+    opacity: 0.95;
+    z-index: -1; /* Asegúrate de que el canvas esté detrás de otros elementos del header */
+}

@@ -1,0 +1,20 @@
+/* Contenedor centrado para la caja de "sobre mí" */
+.about-container {
+    max-width: 800px; /* Ajusta el ancho máximo según tus necesidades */
+    margin: 0 auto; /* Centra el contenedor horizontalmente */
+    padding: 20px; /* Espacio alrededor del contenido */
+}
+
+/* Estilos para las cajas de proyecto y la sección sobre mí */
+.about {
+    background-color: #2b2b2b; /* Fondo oscuro para las cajas */
+    border-radius: 10px; /* Bordes redondeados */
+    padding: 20px; /* Espacio dentro de las cajas */
+    box-shadow: 0 0 25px rgba(0, 153, 255, 0.9); /* Intensifica el efecto fluorescente al hacer hover */
+    transition: transform 0.3s; /* Transición suave en transformaciones */
+}
+
+/* Efecto de escalado al pasar el cursor sobre las cajas */
+.about:hover {
+    transform: scale(1.05); /* Aumenta el tamaño ligeramente al hacer hover */
+}
