@@ -2,7 +2,7 @@
 // Configuración para la conexión a la base de datos
 $server = "localhost"; 
 $username = "root"; //Es un usuario con privilegios elevados en un sistema, en este caso para el ejercicio.
-$password = "Emi290715"; // Se deja en blanco si no hay contraseña
+$password = "Firefighter3V@"; // Se deja en blanco si no hay contraseña
 $database = "portafolio"; //Nombre de la Base de Datos
 
 // Crear conexión

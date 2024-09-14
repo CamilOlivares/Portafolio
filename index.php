@@ -26,7 +26,6 @@
 
          <?php include('views/neuro.php'); ?><!-- Canvas para el efecto Neuro -->
         
-
     </header>
 
     <main>
@@ -35,7 +34,7 @@
 
         <!-- Sección de Proyectos -->
         <section id="projects"> <!-- Contenedor para la sección de proyectos -->
-            <?php include("views/projects.html"); ?> <!-- Incluye el contenido de proyectos usando PHP -->
+            <?php include("views/projects.php"); ?> <!-- Incluye el contenido de proyectos usando PHP -->
         </section>
        
         <?php include("views/buttonglitch.php"); ?><!-- Incluye el Boton Glitch de "Ver Mas" -->
@@ -54,7 +53,10 @@
     <script src="js/neuro.js"></script>
     <!-- Scripts para el cargador de la página -->
     <script src="js/loader.js"></script>
-    
+    <!-- Scripts para el cargador de la página -->
+    <script src="js/recaptcha.js"></script>
+
+
 
 </body>
 </html>
